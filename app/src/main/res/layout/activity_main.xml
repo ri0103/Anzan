@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#111166">
+
+    <TextView
+        android:id="@+id/number1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="80sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFFFFF"
+        android:text="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/sign_text"
+        android:layout_marginTop="72dp"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <TextView
+        android:id="@+id/sign_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="80sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFFFFF"
+        android:text="+"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/number1_text"
+        app:layout_constraintRight_toLeftOf="@id/number2_text"
+        android:layout_marginTop="72dp"/>
+
+    <TextView
+        android:id="@+id/number2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="80sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFFFFF"
+        android:text="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/sign_text"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="72dp"/>
+
+    <TextView
+        android:id="@+id/equal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFFFFF"
+        android:text="="
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/number1_text"
+        app:layout_constraintRight_toLeftOf="@id/input_text"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"/>
+
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:ems="10"
+        android:hint="答えを入力する"
+        android:paddingStart="16dp"
+        android:background="#FFFFFF"
+        android:inputType="numberSigned"
+        app:layout_constraintLeft_toRightOf="@id/equal_text"
+        app:layout_constraintTop_toBottomOf="@id/number1_text"
+        app:layout_constraintRight_toLeftOf="@id/check_button"
+        android:layout_marginTop="32dp"
+        />
+
+    <Button
+        android:id="@+id/check_button"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-black"
+        android:backgroundTint="#FFEB3B"
+        android:textColor="#000000"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/number1_text"
+        app:layout_constraintLeft_toRightOf="@id/input_text"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        android:text="答える" />
+
+    <ImageView
+        android:id="@+id/randy_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/randy_normal_image"
+        app:layout_constraintTop_toBottomOf="@id/input_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
